@@ -1,0 +1,21 @@
+
+{
+    "name": "killerwolf/ezpublish-newrelic",
+    "type": "library",
+    "description": "track web transaction",
+    "homepage":"https://github.com/killerwolf/ezpublish-newrelic",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require": {
+        "intouch/newrelic": "1.0.*"
+    },
+    "authors": [
+        {
+            "name": "Hamdi LAADHARI",
+            "email": "killerwolf06@gmail.com",
+            "homepage": "http://www.h4md1.fr",
+            "role": "Developer"
+        }
+    ]
+}
