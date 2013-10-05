@@ -8,8 +8,12 @@
         "php": ">=5.3.0"
     },
     "require": {
-        "intouch/newrelic": "5.2.*@dev",
+        "intouch/newrelic": "1.0.*",
         "ezsystems/ezpublish-legacy-installer": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpmd/phpmd": "*"
     },
     "authors": [
         {
