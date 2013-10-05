@@ -1,14 +1,19 @@
 
 {
     "name": "killerwolf/ezpublish-newrelic",
-    "type": "library",
+    "type": "ezpublish-legacy-extension",
     "description": "track web transaction",
     "homepage":"https://github.com/killerwolf/ezpublish-newrelic",
     "require": {
         "php": ">=5.3.0"
     },
     "require": {
-        "intouch/newrelic": "1.0.*"
+        "intouch/newrelic": "1.0.*",
+        "ezsystems/ezpublish-legacy-installer": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpmd/phpmd": "*"
     },
     "authors": [
         {
