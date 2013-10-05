@@ -14,8 +14,7 @@ With composer
     
     {
         "require": {
-            "killerwolf/ezpublish-newrelic": "1.*",
-            "ezsystems/ezpublish-legacy": "*"
+            "killerwolf/ezpublish-newrelic": "1.*"
         }
     }
 
