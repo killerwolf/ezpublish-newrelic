@@ -5,8 +5,14 @@ use Intouch\Newrelic\Newrelic;
 class newRelicHandler{
 	static public function trackTransaction(){
 		eZExecution::addCleanupHandler(function(){
-			$newrelic = new Newrelic( true );
-			$newrelic->nameTransaction( self::buildCurrentTransactionName() );
+			if (extension_loaded('newrelic')) {
+				$newrelic = new Newrelic( true );
+				$transactionName = self::buildCurrentTransactionName();
+				$newrelic->nameTransaction( $transactionName );
+    			if ($transactionName == 'content|search'){
+    			    $newrelic->addCustomParameter('SearchText', $_GET['SearchText']);
+                }
+			}
 		});
 	}
 
