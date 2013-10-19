@@ -7,7 +7,11 @@ class newRelicHandler{
 		eZExecution::addCleanupHandler(function(){
 			if (extension_loaded('newrelic')) {
 				$newrelic = new Newrelic( true );
-				$newrelic->nameTransaction( self::buildCurrentTransactionName() );
+				$transactionName = self::buildCurrentTransactionName();
+				$newrelic->nameTransaction( $transactionName );
+    			if ($transactionName == 'content|search'){
+    			    $newrelic->addCustomParameter('SearchText', $_GET['SearchText']);
+                }
 			}
 		});
 	}
